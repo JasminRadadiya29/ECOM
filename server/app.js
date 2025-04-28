@@ -70,6 +70,9 @@ const path = require("path");
 
 const app = express();
 
+app.get("/", (req, res) => {
+  res.send("Welcome to the API");
+});
 // Load environment variables
 dotenv.config();
 
