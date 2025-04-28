@@ -353,7 +353,7 @@ const Editcategoryform = ({ id }) => {
                         <img
                           src={
                             values.category_image == data.data.banner
-                              ? `http://localhost:8000/uploads/images/${data.data.banner}`
+                              ? `https://ecomus-api-sepia.vercel.app/uploads/images/${data.data.banner}`
                               : URL.createObjectURL(values.category_image)
                           }
                           alt="zxcvbnm"

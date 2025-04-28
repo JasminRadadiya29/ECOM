@@ -199,7 +199,7 @@ const Header = () => {
                                 style={{ width: "47%" }}
                               >
                                 <img
-                                  src={`http://localhost:8000/uploads/images/${item.product_image1}`}
+                                  src={`https://ecomus-api-sepia.vercel.app/uploads/images/${item.product_image1}`}
                                   style={{ width: "100%", height: "100%" }}
                                   className="img-fluid  "
                                   alt="product"

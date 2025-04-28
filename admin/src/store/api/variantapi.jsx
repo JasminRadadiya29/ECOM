@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 export const variantApi = createApi({
   reducerPath: 'variantApi',
-  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:8000/api/" }),
+  baseQuery: fetchBaseQuery({ baseUrl: "https://ecomus-api-sepia.vercel.app/api/" }),
   endpoints: (builder) => ({
     getAllVariant: builder.query({
       query: (id) => ({

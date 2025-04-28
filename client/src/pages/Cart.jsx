@@ -116,7 +116,7 @@ const Cart = () => {
                             >
                               <div style={{ padding: "10px" }}>
                                 <img
-                                  src={`http://localhost:8000/uploads/images/${
+                                  src={`https://ecomus-api-sepia.vercel.app/uploads/images/${
                                     item.product_id == null
                                       ? item.product_variant_id.product_image1
                                       : item.product_id.product_image1
@@ -356,7 +356,7 @@ const Cart = () => {
                             }}
                           >
                             <img
-                              src={`http://localhost:8000/uploads/images/${
+                              src={`https://ecomus-api-sepia.vercel.app/uploads/images/${
                                 item.product_id == null
                                   ? item.product_variant_id.product_image1
                                   : item.product_id.product_image1

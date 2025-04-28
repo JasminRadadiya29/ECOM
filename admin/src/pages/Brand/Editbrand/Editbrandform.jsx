@@ -146,7 +146,7 @@ const Editbrandform = ({ id }) => {
                         <img
                           src={
                             values.banner == data.data.brand_image
-                              ? `http://localhost:8000/uploads/images/${data.data.brand_image}`
+                              ? `https://ecomus-api-sepia.vercel.app/uploads/images/${data.data.brand_image}`
                               : URL.createObjectURL(values.banner)
                           }
                           alt="zxcvbnm"

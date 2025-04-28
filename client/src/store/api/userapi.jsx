@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 export const userApi = createApi({
   reducerPath: 'userApi',
-  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:8000/api/user", prepareHeaders: (headers, { getState }) => {
+  baseQuery: fetchBaseQuery({ baseUrl: "https://ecomus-api-sepia.vercel.app/api/user", prepareHeaders: (headers, { getState }) => {
     const token = localStorage.getItem('Oneuptoken'); // Retrieve the token from local storage
     if (token) {
       headers.set('Authorization', `Bearer ${token}`);

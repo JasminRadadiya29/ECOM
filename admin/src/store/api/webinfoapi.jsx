@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 export const webinfoApi = createApi({
   reducerPath: 'webinfoApi',
-  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:8000/api/" }),
+  baseQuery: fetchBaseQuery({ baseUrl: "https://ecomus-api-sepia.vercel.app/api/" }),
   endpoints: (builder) => ({
     getWebinfo: builder.query({
       query: () => ({

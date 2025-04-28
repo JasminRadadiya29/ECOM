@@ -132,7 +132,7 @@ const Home = () => {
       >
         <img
         onClick={()=>{window.location.href = item.banner_link}}
-          src={`http://localhost:8000/uploads/images/${item.banner}`}
+          src={`https://ecomus-api-sepia.vercel.app/uploads/images/${item.banner}`}
           alt={`banner-${index}`}
           className="img-fluid mainbanner bg-img"
           style={{ width: '100%', height: '100%', objectFit: '100% 100%' }}
@@ -264,7 +264,7 @@ const Home = () => {
       <div key={index} style={{ height: isMobile ? '300px' : '400px' }}>
         <img
         onClick={()=>{window.location.href = item.banner_link}}
-          src={`http://localhost:8000/uploads/images/${item.banner}`}
+          src={`https://ecomus-api-sepia.vercel.app/uploads/images/${item.banner}`}
           alt={`banner-${index}`}
           className="img-fluid mainbanner bg-img"
           style={{ width: '100%', height: '100%', objectFit: '100% 100%' }}
@@ -293,7 +293,7 @@ const Home = () => {
 {brnaditem.data.map((item,index)=>(
             <div>
               <div className="brand-box" onClick={()=>{nvg(`/categoryforbrand/${item.brand_name}`)}}>
-              <img src={`http://localhost:8000/uploads/images/${item.brand_image}`} alt="" className="img-fluid" />
+              <img src={`https://ecomus-api-sepia.vercel.app/uploads/images/${item.brand_image}`} alt="" className="img-fluid" />
               </div>
             </div>
 ))}
