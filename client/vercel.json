@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "client/package.json",
+      "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
         "distDir": "build"
@@ -11,14 +11,21 @@
   ],
   "routes": [
     {
+      "src": "/static/(.*)",
+      "headers": {
+        "Cache-Control": "public, max-age=31536000, immutable"
+      },
+      "continue": true
+    },
+    {
       "src": "/(.*)",
-      "dest": "/build/$1"
+      "dest": "/index.html",
+      "headers": {
+        "Cache-Control": "no-cache"
+      }
     }
   ],
   "env": {
     "REACT_APP_API_URL": "https://ecomus-api-sepia.vercel.app/"
-  },
-  "github": {
-    "silent": true
   }
 }
