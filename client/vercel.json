@@ -9,6 +9,12 @@
       }
     }
   ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/build/$1"
+    }
+  ],
   "env": {
     "REACT_APP_API_URL": "https://ecomus-api-sepia.vercel.app/"
   },
