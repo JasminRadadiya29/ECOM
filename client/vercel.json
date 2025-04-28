@@ -1,28 +1,21 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "client/package.json",
-        "use": "@vercel/static-build",
-        "config": {
-          "distDir": "build"
-        }
+  "version": 2,
+  "builds": [
+    {
+      "src": "client/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "build"
       }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "/build/$1"
-      }
-    ],
-    "env": {
-      "REACT_APP_API_URL": "https://ecomus-api-sepia.vercel.app/"
-    },
-    "engines": {
-      "node": "16.x"
-    },
-    "github": {
-      "silent": true
     }
+  ],
+  "env": {
+    "REACT_APP_API_URL": "https://ecomus-api-sepia.vercel.app/"
+  },
+  "engines": {
+    "node": "16.x"
+  },
+  "github": {
+    "silent": true
   }
-  
+}
