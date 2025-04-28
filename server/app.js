@@ -60,8 +60,6 @@
 //   console.log(`server is runing at ${port}`);
 // });
 
-
-
 const express = require("express");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
@@ -111,12 +109,14 @@ const port = process.env.PORT || 8000;
 const database = process.env.database || "your_fallback_mongodb_url";
 
 // Mongoose settings
-mongoose.set('strictQuery', false);
+mongoose.set("strictQuery", false);
 connectdb(database);
 
 // Middlewares
-app.use(cors());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(cors(
+  { origin: "*" } // Allow all origins (you can restrict this in production)
+));
+app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true })); // Handle URL-encoded form data
 app.use(express.json()); // Handle JSON body data
 
