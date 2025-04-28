@@ -12,9 +12,6 @@
   "env": {
     "REACT_APP_API_URL": "https://ecomus-api-sepia.vercel.app/"
   },
-  "engines": {
-    "node": "16.x"
-  },
   "github": {
     "silent": true
   }
